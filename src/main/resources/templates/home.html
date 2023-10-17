@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Dashboard</title>
+    <style>
+ body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    background-color: #5e057e;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.dashboard__title {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.dashboard__user {
+    margin-top: 20px;
+}
+
+.dashboard__user-name {
+    font-size: 50px;
+    color: #c299d0;
+}
+h2{
+color: #c299d0;
+}
+.form-container2 {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: left;
+  justify-content: left;
+  color: black;
+  width: 400px; /* Adjust the width as per your preference */
+
+
+ </style>
+</head>
+
+<body>
+
+<div class="dashboard">
+    <h1 class="dashboard__title">Welcome to the Dashboard</h1>
+    <div class="dashboard__user">
+        <h2 th:text="${userdetail.fullname}" class="dashboard__user-name">User's Name</h2>
+    </div>
+    <fieldset class="form-container2">
+        <legend><h2>Course Outline</h2></legend>
+        <ul>
+            <li>Introduction to C: Strructured Programming elements, <br> structured design principle <br> abstraction modulaity </li>
+            <li>Teaching of a structured programming language such as C</li>
+            <li>Basic Objects-Oriented Programming Concepts</li>
+        </ul>
+    </fieldset>
+</div>
+<span sec:authorize="isAuthenticated"><a th:href="@{/logout}">Logout</a></span>
+</body>
+</html>
