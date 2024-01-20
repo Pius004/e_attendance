@@ -25,7 +25,13 @@ h2 {
   text-align: center;
   color: #5e057e;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: -20px;
+}
+h4{
+text-align: center;
+  color: #D0312D;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .form-group {
@@ -96,9 +102,10 @@ button[type="submit"]:hover {
             </div>
         </div>
 
-        <h2>E-Attendance <br>
+        <h2>E-Attendance & Course Dashboard</h2> <br>
+            <h4>{Note: Mark your Attendance before log-in}</h4>
 
-        </br>Login</h2>
+        </br><h2>Login</h2>
         <form
                 method="post"
                 role="form"
@@ -117,7 +124,7 @@ button[type="submit"]:hover {
             </div>
             <button type="submit">Login</button>
         </form>
-        <span> Mark Attendance here: <a th:href="@{/register}">Attendance</a></span>
+        <span> Mark your Attendance here for each class : <a th:href="@{/register}">Attendance</a></span>
     </div>
 </div>
 
